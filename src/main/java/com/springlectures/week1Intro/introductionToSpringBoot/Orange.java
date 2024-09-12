@@ -1,5 +1,4 @@
 package com.springlectures.week1Intro.introductionToSpringBoot;
-
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
@@ -18,5 +17,4 @@ public class Orange {
     void callThisBeforeDestroy() {
         System.out.println("Destroying the Orange bean...");
     }
-
 }

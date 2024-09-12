@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
-	@Autowired
+	@Autowired // this is how field injection is done
 	Apple myApple1;
 
 	@Autowired
@@ -20,14 +20,16 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	@Autowired
 	Orange myOrange2;
 
+	@Autowired
+	DbService dBs;
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
+
 		myApple1.eatApple();
 		myApple2.eatApple();
 
@@ -41,6 +43,8 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 		// hash codes for myOrange1 and myOrange2 are different (prototype scope)
 		System.out.println("Orange 1 hashCode: " + myOrange1.hashCode());
 		System.out.println("Orange 2 hashCode: " + myOrange2.hashCode());
+
+		System.out.println("Dev Data is: " + dBs.getData());
 	}
 
 }
