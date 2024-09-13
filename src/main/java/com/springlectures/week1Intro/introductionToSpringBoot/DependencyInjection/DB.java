@@ -1,4 +1,4 @@
-package com.springlectures.week1Intro.introductionToSpringBoot;
+package com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection;
 
 import org.springframework.stereotype.Service;
 

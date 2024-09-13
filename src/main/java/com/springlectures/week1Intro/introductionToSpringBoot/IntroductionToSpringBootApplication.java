@@ -1,5 +1,5 @@
 package com.springlectures.week1Intro.introductionToSpringBoot;
-
+import com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class IntroductionToSpringBootApplication implements CommandLineRunner {
-
 	@Autowired // this is how field injection is done
 	Apple myApple1;
 
@@ -21,7 +20,7 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	Orange myOrange2;
 
 	@Autowired
-	DbService dBs;
+    DbService dBs;
 
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
@@ -46,5 +45,4 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
 		System.out.println("Dev Data is: " + dBs.getData());
 	}
-
 }

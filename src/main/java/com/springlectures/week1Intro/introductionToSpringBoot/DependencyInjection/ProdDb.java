@@ -1,5 +1,6 @@
-package com.springlectures.week1Intro.introductionToSpringBoot;
+package com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection;
 
+import com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection.DB;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 

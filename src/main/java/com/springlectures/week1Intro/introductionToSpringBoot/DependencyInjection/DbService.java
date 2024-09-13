@@ -1,6 +1,4 @@
-package com.springlectures.week1Intro.introductionToSpringBoot;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,7 +9,6 @@ public class DbService {
 //    @Autowired
 //    ProdDb prodDb;
 
-
     private final DB db; // this should be made final here since no new instance is needed
 
     // this is how constructor injection is done
@@ -19,7 +16,7 @@ public class DbService {
         this.db = db;
     }
 
-    String getData() {
+    public String getData() {
         return db.getDataFromDb();
     }
 }
