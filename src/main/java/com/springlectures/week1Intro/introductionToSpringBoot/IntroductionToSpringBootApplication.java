@@ -1,4 +1,7 @@
 package com.springlectures.week1Intro.introductionToSpringBoot;
+import com.springlectures.week1Intro.introductionToSpringBoot.AliceAndBakery.CakeBakerService;
+import com.springlectures.week1Intro.introductionToSpringBoot.AliceAndBakery.ChocolateCakeBaker;
+import com.springlectures.week1Intro.introductionToSpringBoot.AliceAndBakery.StrawberryCakeBaker;
 import com.springlectures.week1Intro.introductionToSpringBoot.DependencyInjection.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,6 +25,9 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	@Autowired
     DbService dBs;
 
+	@Autowired
+	CakeBakerService cakeBakerService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 	}
@@ -44,5 +50,8 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 		System.out.println("Orange 2 hashCode: " + myOrange2.hashCode());
 
 		System.out.println("Dev Data is: " + dBs.getData());
+
+		cakeBakerService.bakeChocolateCake();
+		cakeBakerService.bakeStrawberryCake();
 	}
 }

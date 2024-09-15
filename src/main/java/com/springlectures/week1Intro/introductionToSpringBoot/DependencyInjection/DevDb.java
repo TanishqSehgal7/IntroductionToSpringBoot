@@ -12,5 +12,5 @@ public class DevDb implements DB {
     public String getDataFromDb() {
         return "Data from Development Database";
     }
-    
+
 }
